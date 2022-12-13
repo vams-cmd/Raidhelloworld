@@ -58,12 +58,12 @@ exports.handler = function(event, context) {
                 return this.body.indexOf(search) > -1;    
             }
         };
-        http.get(url, function(response) {
-            pageObject.body = '';
-            pageObject.statusCode = response.statusCode;
+        //http.get(url, function(response) {
+            //pageObject.body = '';
+            //pageObject.statusCode = response.statusCode;
             
-            response.on('data', function (chunk) {
-                pageObject.body += chunk;
+            //response.on('data', function (chunk) {
+                //pageObject.body += chunk;
             });
             
             response.on('end', function () {
